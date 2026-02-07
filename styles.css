@@ -1,11 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .calculator {
-  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 400px;
   height: 600px;
- background-color: #ffffe0;
-  );
+  background-color: #ffffe0;
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 6px 5px 13px 0px rgba(0, 0, 0, 0.5);
+}
+.display {
   border: 3px solid rgba(169, 169, 169, 0.212);
-  margin: 20px auto 0;
-
+  margin: 20px auto;
   box-shadow: 4px 12px 18px -6px #000000;
 }
 
@@ -13,15 +24,66 @@ h1 {
   text-align: center;
 }
 
-.display-container{
-    height: 150px;
-    width: 100%;
-    background-color: greenyellow;
+.display-container {
+  flex: 1;
+  width: 100%;
+  margin: auto;
+  padding-top: 20px;
+  background-color: greenyellow;
 }
 
-.display{
-    height:100px;
-    width: 80%;
-    margin: auto;
-    background-color: rgb(47, 255, 227);
+.display {
+  height: 70px;
+  width: 80%;
+  margin: 20 px auto;
+  background-color: rgb(230, 241, 240);
+  box-shadow: inset 1px 1px 8px 3px rgba(38, 38, 38, 0.93);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.digits {
+  font-size: 50px;
+}
+.toetsen {
+  display: flex;
+  flex: 3;
+  height: 100%;
+  width: 100%;
+}
+
+.toetsen-links {
+  background-color: aliceblue;
+  flex: 3;
+}
+.toetsen-rechts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.bewerken {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 6px 5px #e1e2de;
+}
+.isgelijkaan {
+  border: red 3px solid;
+  color: red;
+  width: 70px;
+}
+
+.toetsen-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
