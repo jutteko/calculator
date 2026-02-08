@@ -68,7 +68,8 @@ h1 {
   flex: 1;
 }
 .bewerken,
-.cijfer {
+.cijfer,
+.isgelijkaan {
   font-size: 25px;
   display: flex;
   align-items: center;

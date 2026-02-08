@@ -17,10 +17,33 @@ function operate(o, a, b) {
   }
 }
 
+let display = document.querySelector(".digits");
 const cijferKnoppen = document.querySelectorAll(".cijfer");
+const operatorKnoppen = document.querySelectorAll(".bewerken");
+const isgelijkaanKnop = document.querySelector("#isGelijkAan");
 
+//evenlistener aan de cijferknoppen hangen
 cijferKnoppen.forEach((knop) => {
   knop.addEventListener("click", (e) => {
-    console.log(`Je hebt op ${e.target.textContent} geklikt`);
+    display.textContent += e.target.textContent;
   });
+});
+
+// eventlistener aan de operatorknoppen hangen
+operatorKnoppen.forEach((knop) => {
+  knop.addEventListener("click", (e) => {
+    firstNumber = display.textContent;
+    operator = e.target.textContent;
+    display.textContent = "";
+  });
+});
+
+// eventlistener aan de isgelijkaanKnop hangen
+isgelijkaanKnop.addEventListener("click", (e) => {
+  secondNumber = display.textContent;
+  display.textContent = operate(
+    operator,
+    parseFloat(firstNumber),
+    parseFloat(secondNumber),
+  );
 });
