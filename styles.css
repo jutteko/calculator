@@ -55,7 +55,9 @@ h1 {
 }
 
 .toetsen-links {
-  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   flex: 3;
 }
 .toetsen-rechts {
@@ -65,7 +67,8 @@ h1 {
   justify-content: space-evenly;
   flex: 1;
 }
-.bewerken {
+.bewerken,
+.cijfer {
   font-size: 25px;
   display: flex;
   align-items: center;
@@ -73,17 +76,31 @@ h1 {
   font-family: monospace;
   padding: 10px 20px;
   border-radius: 15px;
-  box-shadow: 2px 2px 6px 5px #e1e2de;
+  box-shadow:
+    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+    rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .isgelijkaan {
   border: red 3px solid;
   color: red;
-  width: 70px;
 }
 
-.toetsen-links {
+.ce {
+  border: rgb(35, 12, 236) 3px solid;
+  color: rgb(35, 12, 236);
+  margin-left: 30px;
+}
+
+.rij2,
+.rij3,
+.rij4,
+.rij5 {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-evenly;
 }
