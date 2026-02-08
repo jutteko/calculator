@@ -1,6 +1,6 @@
 let firstNumber;
 let operator;
-let secondOperator;
+let secondNumber;
 
 function operate(o, a, b) {
   switch (o) {
@@ -16,3 +16,11 @@ function operate(o, a, b) {
       return "not a valuable operator";
   }
 }
+
+const cijferKnoppen = document.querySelectorAll(".cijfer");
+
+cijferKnoppen.forEach((knop) => {
+  knop.addEventListener("click", (e) => {
+    console.log(`Je hebt op ${e.target.textContent} geklikt`);
+  });
+});
