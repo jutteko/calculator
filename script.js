@@ -21,6 +21,7 @@ let display = document.querySelector(".digits");
 const cijferKnoppen = document.querySelectorAll(".cijfer");
 const operatorKnoppen = document.querySelectorAll(".bewerken");
 const isgelijkaanKnop = document.querySelector("#isGelijkAan");
+const clear = document.querySelector(".ce");
 
 //evenlistener aan de cijferknoppen hangen
 cijferKnoppen.forEach((knop) => {
@@ -46,4 +47,12 @@ isgelijkaanKnop.addEventListener("click", (e) => {
     parseFloat(firstNumber),
     parseFloat(secondNumber),
   );
+});
+
+// eventlistener aan de CE-knop
+CDATASection.addEventListener("click", (e) => {
+  display.textContent = "";
+  firstNumber = 0;
+  secondNumber = 0;
+  operator = "";
 });
